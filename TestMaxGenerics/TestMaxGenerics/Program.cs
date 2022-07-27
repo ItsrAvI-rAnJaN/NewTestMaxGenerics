@@ -19,6 +19,7 @@ namespace TestMaxGenrics
                 Console.WriteLine("1.Find Maximum Among Three Integer");
                 Console.WriteLine("2.Find Maximum Among Three Float");
                 Console.WriteLine("3.Find Maximum Among Three String Value");
+                Console.WriteLine("4.Find Maximum Among Three Value Using Generics Method");
                 Console.Write("\nEnter Your Choice : ");
                 Choice = Convert.ToInt32(Console.ReadLine()); // store iput From User & Convert Into Integer type
 
@@ -62,6 +63,37 @@ namespace TestMaxGenrics
 
                         Console.WriteLine("Maximum Integer Number = {0}", objFindMaxString.FindMaxAmongString("Dwayne", "Cherry", "Scarlet"));
                         break;
+
+                    case 4:
+                        GenricMethodMax objfindmax = new GenricMethodMax();
+                        // for integer value
+                        Console.WriteLine("Maximum Integer Number = {0}", objfindmax.FindMaxGeneric(30, 20, 10));
+
+                        Console.WriteLine("Maximum Integer Number = {0}", objfindmax.FindMaxGeneric(40, 60, 50));
+
+                        Console.WriteLine("Maximum Integer Number = {0}", objfindmax.FindMaxGeneric(70, 80, 90));
+                        Console.WriteLine("###################################################");
+
+
+                        // for Float Value
+                        Console.WriteLine("Maximum Float Number = {0}", objfindmax.FindMaxGeneric(3.1f, 2.1f, 1.1f));
+
+                        Console.WriteLine("Maximum Float Number = {0}", objfindmax.FindMaxGeneric(4.1f, 6.1f, 5.1f));
+
+                        Console.WriteLine("Maximum Float Number = {0}", objfindmax.FindMaxGeneric(7.1f, 8.1f, 9.1f));
+                        Console.WriteLine("###################################################");
+
+
+
+                        // for String Value
+                        Console.WriteLine("Maximum String Value = {0}", objfindmax.FindMaxGeneric("David", "Bryan", "Dane"));
+
+                        Console.WriteLine("Maximum String Value = {0}", objfindmax.FindMaxGeneric("Amber", "Charlie", "Bruno"));
+
+                        Console.WriteLine("Maximum String Value = {0}", objfindmax.FindMaxGeneric("Dwayne", "Cherry", "Scarlet"));
+
+                        break;
+
 
                     default:
                         Console.WriteLine("Please Enter Correct Question Number");
