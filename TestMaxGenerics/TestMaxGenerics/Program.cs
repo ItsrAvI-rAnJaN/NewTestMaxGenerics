@@ -21,7 +21,8 @@ namespace TestMaxGenrics
                 Console.WriteLine("3.Find Maximum Among Three String Value");
                 Console.WriteLine("4.Find Maximum Among Three Value Using Generics Method");
                 Console.WriteLine("5.Find Maximum among Three Value using Generic class");
-                Console.WriteLine("6. Find Maximum from More Than Three Parameters Using Generic");
+                Console.WriteLine("6.Find Maximum from More Than Three Parameters Using Generic");
+                Console.WriteLine("7.Find Maximum & Print using Generic Method");
                 Console.Write("\nEnter Your Choice : ");
                 Choice = Convert.ToInt32(Console.ReadLine()); // store iput From User & Convert Into Integer type
 
@@ -133,6 +134,22 @@ namespace TestMaxGenrics
                         GenericFindMax<string> objMaxString = new GenericFindMax<string>(stringArray);
                         Console.WriteLine("Maximum String Value = " + objMaxString.FindMaxMethod());
                         Console.WriteLine("######################################################\n");
+                        break;
+                    case 7:
+                        //Test case for Integer
+                        int[] intArrayPrint = { 100, 120, 150, 130, 240 };
+                        GenericFindMax<int> printInt = new GenericFindMax<int>(intArrayPrint);
+                        printInt.PrintMax();
+
+                        //Test case for Float
+                        float[] floatArrayPrint = { 11.1f, 52.2f, 45.5f, 23.3f, 14.4f };
+                        GenericFindMax<float> printFloat = new GenericFindMax<float>(floatArrayPrint);
+                        printFloat.PrintMax();
+
+                        //Test case for String
+                        string[] stringArrayPrint = { "Daniel", "David", "Jhon", "Dwyane", "Charlie" };
+                        GenericFindMax<string> printString = new GenericFindMax<string>(stringArrayPrint);
+                        printString.PrintMax();
                         break;
 
 
